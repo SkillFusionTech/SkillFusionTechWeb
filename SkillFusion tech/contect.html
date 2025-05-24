@@ -1,0 +1,68 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Skill Fusion Tech</title>
+  <link rel="stylesheet" href="CSS/crese.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Skill Fusion Tech</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="corse.html">Courses</a></li>
+        <li><a href="contect.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact-form reveal">
+  <h1>Contact Us</h1>
+  <form id="whatsapp-form" onsubmit="sendToWhatsApp(event)">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="email" id="email" placeholder="Your Email" required />
+    <textarea id="message" placeholder="Your Message or Course Interest" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+  <p>📞 Or WhatsApp: <a href="https://wa.me/918980174334" target="_blank">8980174334</a></p>
+</section>
+
+<script>
+  function sendToWhatsApp(event) {
+    event.preventDefault(); // prevent default form action
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    const whatsappNumber = "918980174334";
+    const text = `Hello, my name is ${name}%0AEmail: ${email}%0AQuery: ${message}`;
+    const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+    window.open(url, "_blank");
+  }
+</script>
+
+  <!-- <section class="contact-form reveal">
+    <h1>Contact Us</h1>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message or Course Interest" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p>📞 Or WhatsApp: <a href="https://wa.me/918980174334">8980174334</a></p>
+  </section> -->
+
+  <script src="script.js"></script>
+</body>
+</html>
