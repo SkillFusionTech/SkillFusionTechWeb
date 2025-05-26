@@ -1,0 +1,41 @@
+.courses, .contact-form {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.course-card {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffd5;
+}
+
+.course-card h2 {
+  color: #00ffd5;
+}
+
+.course-card ul {
+  text-align: left;
+  margin: 15px 0;
+  list-style: square inside;
+}
+
+.contact-form form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+}
